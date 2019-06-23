@@ -1,0 +1,21 @@
+<view class="Page-Title-Block" bindtap="clicked">
+  <rich-text
+    class="__title"
+  > {{ title }} </rich-text>
+  <slot
+    wx:if="{{ title === '' }}"
+    name="font-picker"
+  ></slot>
+  <slot
+    wx:if="{{ title === '' }}"
+    name="title-with-font"
+  ></slot>
+  <rich-text
+    class="__time"
+    bindtap="openTimeManagement"
+  > {{ time }} </rich-text>
+  <view
+    class="__img"
+    style="background-image: url('{{ imgSrc }}')"
+  ></view>
+</view>

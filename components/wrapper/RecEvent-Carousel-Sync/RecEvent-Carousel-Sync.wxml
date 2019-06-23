@@ -1,0 +1,48 @@
+<wxs src="set.wxs" module="SET" />
+
+<view class="RecEvent-Carousel-Sync">
+  <view class="RecEvent-Carousel-Sync__top">
+    <rich-text wx:if="{{ timeWord !== '' }}"
+               class="__text">
+      {{ timeWord }}
+      <text>@{{ location }}</text>
+    </rich-text>
+  </view>
+  <view class="RecEvent-Carousel-Sync__bottom">
+    <swiper
+      indicator-dots="{{ false }}"
+      autoplay="{{ false }}"
+      interval="1000"
+      duration="500"
+      class="Carousel__swiper"
+      bind:change="carouselSwiped"
+      current="{{ current }}"
+      next-margin="40px"
+    >
+      <block wx:for="{{ items }}"
+            wx:key="item.id"
+      >
+        <swiper-item class="Carousel__swiper-slide">
+          <view>
+            <rich-text class="__text-description">
+              First sentence
+              <text> {{ description }} </text>
+            </rich-text>
+            <rich-text wx:if="{{ repeated !== '' }}"
+                       class="__text-time">
+              {{ repeated }} {{ fromTo }}
+            </rich-text>
+            <view style="background-image: url('{{ item.poster }}');"
+                  class="__img"
+                  data-id="{{ item.id }}"
+                  bind:load="imgLoaded"
+            />
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="RecEvent-Carousel-Sync__divider-wrapper">
+    <Divider noMargin="{{ true }}" isEternal="{{ true }}" />
+  </view>
+</view>

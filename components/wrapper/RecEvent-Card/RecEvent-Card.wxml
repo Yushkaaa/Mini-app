@@ -1,0 +1,29 @@
+<navigator wx:if="{{ !deleteFromDom }}"
+           class="Rec-Event-Card"
+           url="/pages/events/show/show?id={{ event.event_id }}"
+>
+  <view class="Rec-Event-Card__title">
+    <rich-text class="__text"> {{ timeWord }} {{ category }}
+      <text wx:if="{{ location !== '' }}"
+            class="__text-gray"> @{{ location }} </text>
+    </rich-text>
+  </view>
+  <view class="Rec-Event-Card__description">
+    <rich-text class="__text"> First sentence.
+      <text> {{ description }} </text>
+    </rich-text>
+  </view>
+  <view wx:if="{{ repeated !== '' }}"
+        class="Rec-Event-Card__sub-title">
+    <rich-text class="__text"> {{ repeated }} {{ fromTo }} </rich-text>
+  </view>
+  <view class="Rec-Event-Card__image">
+    <view class="img"
+          style="background-image:url('{{ event.poster }}');"
+    />
+  </view>
+</navigator>
+<Divider wx:if="{{ !deleteFromDom }}"
+         noMargin="{{ true }}"
+         type="big"
+/>

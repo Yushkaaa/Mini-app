@@ -1,0 +1,7 @@
+{
+    "component": true,
+    "usingComponents": {
+        "Title": "/components/kit/Title/Title",
+        "Divider": "/components/kit/Divider/Divider"
+    }
+}

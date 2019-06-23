@@ -1,0 +1,44 @@
+.Font-Picker {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.Font-Picker .textarea {
+  height: 30px;
+  width: calc(100% - 52px);
+  margin: 0 auto;
+  text-align: center;
+  line-height: normal;
+  border-bottom: 1px solid #ccc;
+}
+.Font-Picker__categories {
+  flex: 1 1 auto;
+  text-align: center;
+  width: 26px;
+}
+.Font-Picker__categories--edit {
+  flex: 1 1 auto;
+  text-align: center;
+  padding: 0;
+  width: 26px;
+}
+.Font-Picker__fonts {
+  position: relative;
+  width: 26px;
+  padding: 0;
+  text-align: center;
+}
+.Font-Picker .__text {
+  color: #000;
+  line-height: 20px;
+}
+.Font-Picker .font-image {
+  width: 18px;
+  height: 10px;
+}
+.Font-Picker .settings-image {
+  width: 20px;
+  height: 20px;
+}

@@ -1,0 +1,88 @@
+
+.block {
+   
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    width: calc(100% - 30px);
+    height: xxx;
+    flex: 1;
+}
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 5px;
+    margin-right: 20px;
+}
+.taxiImage {
+  width: 40px;
+  height: 40px;
+}
+.map-box-text-and-arrow {
+  width: calc(100% - 30px);
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+}
+.map-box-text-and-arrow .arrow-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 5px;
+}
+.map-box-text-and-arrow .arrow-box .arrow {
+  font-size: 15px;
+  width: 15px;
+  height: 15px;
+  color: #8b8b8b;
+}
+.icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-right: 20px;
+  margin-left: 5px;
+  width: 48px;
+  height:48px;
+}
+.metro-line-icon {
+  padding: 8px;
+  height: 10px;
+  font-size: 18px;
+  line-height: 12px;
+  color: white;
+  border-radius: 4px;
+  font-weight: bold;
+  border: 1px solid #FF99CC;
+  background-color: #FF99CC;
+  display: inline-block;
+}
+.Location-Content {
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+.Location-Content__title-block {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.element-wrapper {
+  width: calc(100% - 30px);
+  padding: 0 15px;
+}
+.map-wrapper .map-wrapper__map {
+  width: 100%;
+  bottom: 0; /*maybe unnecary*/
+}
+.map-wrapper .map-wrapper__map image {
+  display: block;
+}

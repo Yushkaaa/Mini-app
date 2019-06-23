@@ -1,0 +1,10 @@
+.link {
+  display: block;
+  background: #ccc;
+  color: #fff;
+  margin-bottom: 15px;
+  text-align: center;
+  width: 100%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}

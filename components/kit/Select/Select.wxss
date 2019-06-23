@@ -1,0 +1,49 @@
+.Select {
+  width: calc(100% - 30px);
+  padding: 0 15px 40px 15px;
+  height: auto;
+  position: relative;
+}
+.Select .Select__picker-wrapper {
+  width: 100%;
+  height: auto;
+}
+.Select .__checkbox-wrapper {
+  position: absolute;
+  left: 0;
+  top: -5px;
+}
+.Select .Select__picker-wrapper .__label {
+  display: block;
+  margin-bottom: 16px;
+  font-size: 15px;
+  line-height: 25px;
+  color: #888888;
+  font-weight: 400;
+}
+.Select .Select__picker-wrapper .__input {
+  display: block;
+  font-size: 28px;
+  line-height: 38px;
+  color: #000000;
+  font-weight: 800;
+  opacity: 1;
+}
+.Select .Select__picker-wrapper .__input.isDisabled {
+  opacity: 0.7;
+  color: #b2b2b2;
+}
+.Select .Select__picker-wrapper .__helper {
+  display: inline-block;
+  margin-right: 2px;
+}
+/*
+  Picker modes
+*/
+.Select .Select__picker-wrapper.time.fromTo .picker {
+  display: inline-block;
+  margin-right: 5px;
+}
+.Select .Select__picker-wrapper.time.fromTo .picker:last-child {
+  margin-right: 0;
+}

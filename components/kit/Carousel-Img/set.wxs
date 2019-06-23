@@ -1,0 +1,6 @@
+var height = function (value) {
+  return 'height: ' + value + 'px;';
+};
+module.exports = {
+  height: height
+};

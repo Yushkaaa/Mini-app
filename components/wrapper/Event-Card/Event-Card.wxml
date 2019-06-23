@@ -1,0 +1,30 @@
+<navigator wx:if="{{ !deleteFromDom }}"
+           class="Event-Card"
+           url="/pages/events/show/show?id={{ event.event_id }}"
+>
+  <view class="Event-Card__left">
+    <view class="img"
+          style="background-image:url('{{ event.poster }}');"
+    />
+  </view>
+  <view class="Event-Card__right">
+      <view class="Event-Card__right--top">
+        <rich-text class="__text"> {{ title }} {{ event_id }}
+          <text class="__text-blue"> @{{ location }} </text>
+        </rich-text>
+      </view>
+      <view class="Event-Card__right--middle">
+          <rich-text class="__text"> {{ description }} </rich-text>
+      </view>
+      <view class="Event-Card__right--bottom">
+          <rich-text class="__text"> {{ date.month }} {{ date.day }}
+              <rich-text class="__text-gray"> {{ date.weekDay }}</rich-text>
+          </rich-text>
+      </view>
+  </view>
+</navigator>
+<Divider wx:if="{{ !deleteFromDom }}"
+         noMargin="{{ true }}"
+         type="big"
+/>
+

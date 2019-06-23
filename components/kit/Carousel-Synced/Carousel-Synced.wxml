@@ -1,0 +1,44 @@
+<wxs src="set.wxs" module="SET" />
+
+<view class="Carousel-Synced">
+  <view class="Carousel-Synced__top">
+    <block wx:for="{{ days }}"
+           wx:key="item.id"
+    >
+      <view class="Carousel-Synced__top-day {{ item.id === current ? 'active' : '' }}"
+            bindtap="chooseActive"
+            data-id="{{ item.id }}"
+      >
+        {{ item.name }}
+      </view>
+    </block>
+  </view>
+  <view class="Carousel-Synced__bottom">
+    <swiper
+      indicator-dots="{{ false }}"
+      autoplay="{{ false }}"
+      interval="1000"
+      duration="500"
+      class="Carousel__swiper"
+      bind:change="carouselSwiped"
+      current="{{ current }}"
+    >
+      <block wx:for="{{ items }}"
+            wx:key="item.id"
+      >
+        <swiper-item class="Carousel__swiper-slide">
+          <view style="padding-top: 10px;">
+            <view style="background-image: url('{{ item.url }}');"
+                  class="__img"
+                  data-id="{{ item.id }}"
+                  bind:load="imgLoaded"
+            />
+            <view class="__text">
+              some text Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, nihil?
+            </view>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+</view>

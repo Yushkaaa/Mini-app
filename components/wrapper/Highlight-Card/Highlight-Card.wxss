@@ -1,0 +1,30 @@
+.Highlight-Card {
+  margin-bottom: 20px;
+}
+.Highlight-Card .Highlight-Card__content {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.Highlight-Card .Highlight-Card__content .__text {
+  font-size: 18px;
+  font-weight: 900;
+  color: #000000;
+}
+.Highlight-Card .Highlight-Card__content .__text-gray {
+  text-align: left;
+  color: #888888;
+  font-size: 18px;
+  font-weight: 450;
+}
+.Highlight-Card .Highlight-Card__image {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.Highlight-Card .Highlight-Card__image .__image {
+  width: 100%;
+  display: block;
+}

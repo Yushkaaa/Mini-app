@@ -1,0 +1,87 @@
+<view class="Select">
+  <view
+    class="__checkbox-wrapper"
+    style="left : {{(label.length * 7) + 30}}px"
+  >
+    <slot name="checkbox"></slot>
+  </view>
+  <!--\ selector /-->
+  <view
+    wx:if="{{ mode === 'selector' }}"
+    class="Select__picker-wrapper selector {{ type }}"
+  >
+    <picker
+      class="picker"
+      bindchange="bindPickerChange"
+      range="{{ values }}"
+      mode="selector"
+      disabled="{{ isDisabled }}"
+    >
+      <rich-text class="__label">
+        {{ label }}
+      </rich-text>
+      <rich-text class="__input {{ isDisabled ? 'isDisabled' : '' }}">
+        {{ values[value] }}
+      </rich-text>
+    </picker>
+  </view>
+  <!--\ date /-->
+  <view
+    wx:if="{{ mode === 'date' }}"
+    class="Select__picker-wrapper {{ mode }}"
+  >
+    <picker
+      class="picker"
+      bindchange="bindDateChange"
+      mode="date"
+      start="2018-01-01"
+      disabled="{{ isDisabled }}"
+    >
+      <rich-text class="__label"> {{ label }} </rich-text>
+      <rich-text class="__input {{ isDisabled ? 'isDisabled' : '' }}"> {{ date }} </rich-text>
+    </picker>
+  </view>
+  <!--\ time /-->
+  <view wx:if="{{ mode === 'time' }}">
+    <view
+      wx:if="{{ type === 'simple' }}"
+      class="Select__picker-wrapper time simple"
+    >
+      <picker
+        class="picker"
+        bindchange="bindTimeChange"
+        mode="{{ mode }}"
+        disabled="{{ isDisabled }}"
+      >
+        <rich-text class="__label"> {{ label }} </rich-text>
+        <rich-text class="__input {{ isDisabled ? 'isDisabled' : '' }}"> {{ value }} </rich-text>
+      </picker>
+    </view>
+    <view
+      wx:if="{{ type === 'fromTo' }}"
+      class="Select__picker-wrapper {{ mode }} {{ type }}"
+    >
+      <rich-text class="__label"> {{ label }} </rich-text>
+      <picker
+        class="picker"
+        bindchange="bindTimeChangeFrom"
+        mode="{{ mode }}"
+        disabled="{{ isDisabled }}"
+      >
+        <rich-text class="__input {{ isDisabled ? 'isDisabled' : '' }}">
+          <rich-text class="__helper">From</rich-text> {{ valueFrom }}
+        </rich-text>
+      </picker>
+      <picker
+        class="picker"
+        bindchange="bindTimeChangeTo"
+        mode="{{ mode }}"
+        disabled="{{ isDisabled }}"
+      >
+        <rich-text class="__input {{ isDisabled ? 'isDisabled' : '' }}">
+          <rich-text class="__helper">To</rich-text> {{ valueTo }}
+        </rich-text>
+      </picker>
+    </view>
+  </view>
+</view>

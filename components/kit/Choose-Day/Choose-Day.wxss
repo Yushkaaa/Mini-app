@@ -1,0 +1,55 @@
+.WZ_Choose_Day {
+  height: auto;
+  width: calc(100% - 30px);
+  padding: 0 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+}
+.WZ_Choose_Day.isSlot {
+  width: 100%;
+  padding: 0;
+  margin-bottom: 0;
+}
+.WZ_Choose_Day .WZ_Choose_Day__wrapper {
+  width: 100%;
+  height: auto;
+  max-width: 345px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.WZ_Choose_Day__wrapper .__day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  font-size: 15px;
+  line-height: 36px;
+  text-align: center;
+  color: #444444;
+  background: #f8f8f8;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #dfdfdf;
+  border-radius: 3px;
+  transition:
+    height ease-in .1s,
+    width ease-in-out .1s,
+    background ease-in .1s,
+    border-color ease-in .1s,
+    color ease-in .3s;
+}
+.WZ_Choose_Day__wrapper .__day:active {
+  background: #179a16;
+  outline: none;
+}
+.WZ_Choose_Day__wrapper .__day.active {
+  color: #ffffff;
+  background: #1aad19;
+  border-color: #1aad19;
+}

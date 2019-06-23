@@ -1,0 +1,20 @@
+<view class="Title {{ mode }}">
+  <rich-text
+    class="{{ type }}-{{ mode }} {{ needBorder ? 'with-border' : '' }} common"
+  >
+    {{ text }}
+  </rich-text>
+  <text wx:if="{{ subText }}" class="{{ type }}-{{ mode }}" > {{ subText }} </text>
+  <text wx:if="{{ number }}"
+        class="{{ type }}-{{ mode }}-number"
+        style="background-color: {{ metroLineColor }};border-color: {{ metroLineColor }};"
+  > {{ number }} </text>
+  <view wx:if="{{ iconUrl }}"
+        class="__icon {{ mode }}"
+  >
+    <image class="img"
+           src="{{ iconUrl }}"
+           mode="aspectFix"
+    />
+  </view>
+</view>

@@ -1,0 +1,50 @@
+.Text {
+  width: 100%;
+  display: block;
+}
+.Text text {
+  font-weight: bold;
+  color: black;
+} 
+.Text .common {
+  display: block;
+  width: 100%;
+  
+}
+.Text .with-border {
+  border-bottom: 1px solid #f7f7f7;
+  margin-bottom: 25px;
+}
+.Text .Highlight {
+  text-align: left;
+  color: #8b8b8b;
+  font-size: 18px;   
+  font-weight: 400;
+}
+.Text .Swiper {
+  font-weight: 400;
+  font-size: 15px;
+  color: #8b8b8b;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  line-height: normal;        /* fallback */
+  max-height: normal*3;       /* fallback */
+}
+.Text .Opening-Times {
+  font-size: 18px;
+  line-height: 20px;
+}
+.Text .Sub-Opening-Times {
+  margin-top: 2px;
+  font-size: 12px;  
+  color: #8b8b8b;
+}
+.Text .Bottom-Bar {
+  color:#8b8b8b;
+  font-weight: bold; 
+  font-size: 13px;
+}

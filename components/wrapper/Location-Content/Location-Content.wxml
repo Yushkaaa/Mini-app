@@ -1,0 +1,43 @@
+<view class="Location-Content">
+  <view wx:if="{{ locationData }}"
+        class="Location-Content__title-block element-wrapper"
+        bindtap="onViewMapTap"
+  >
+    <Title type="Title-Subtitle"
+           mode="Map"
+           text="{{ locationName }}"
+           subText="{{ locationData.location.address }}"
+           iconUrl="/images/more.svg"
+    />
+  </view>
+  <view bindtap="openMap" class="map-wrapper">
+    <image
+      class="map-wrapper__map"
+      mode="widthFix"
+      src="https://restapi.amap.com/v3/staticmap?location={{ locationData.location['longitude'] }},{{ locationData.location['latitude'] }}&zoom=13&size=750*300&markers=large,,A:{{ locationData.location['longitude'] }},{{ locationData.location['latitude'] }}&key=85ca42df755cbda9c1335d82bf95253e"
+    />
+  </view>
+</view>
+<view bindtap="openMap"
+      class="element-wrapper"
+      wx:if="{{ locationData.subwayData.line_number !== undefined }}"
+>
+  <Title type="Title-Subtitle"
+          mode="Subway"
+          text="{{ page.static['metro-box--title'][lang] }}"
+          subText="{{ locationData.subwayData.name[lang] }}{{ locationData.subwayData.exit !== undefined ? (' Exit ' + locationData.subwayData.exit) : '' }}"
+          number="{{ locationData.subwayData.line_number }}"
+  />
+  <Divider noMargin="{{ true }}" isEternal="{{ true }}" />
+</view>
+<view class="element-wrapper"
+      bindtap="getTaxi"
+>
+  <Title type="Title-Subtitle"
+         mode="Didi-taxi"
+         text="{{ page.static['didi-box--title'][lang] }}"
+         subText="{{ locationData.location.distance + ' ' }}{{ page.static['distance-unit'][lang] }}"
+         iconUrl="/images/didi.svg"
+  />
+  <Divider noMargin="{{ true }}" isEternal="{{ true }}" />
+</view>

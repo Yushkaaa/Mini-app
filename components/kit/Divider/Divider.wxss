@@ -1,0 +1,18 @@
+.Divider {
+  display: block;
+  background: #fff;
+  padding-bottom: 19px;
+}
+.Divider.big {
+  padding-bottom: 34px;
+}
+.Divider .Divider__line {
+  border-top: 1px solid #f7f7f7;
+  margin-left: 15px;
+}
+.Divider .Divider__line.no-margin {
+  margin-left: 0;
+}
+.Divider .Divider__line.eternal {
+  width: 1000px;
+}

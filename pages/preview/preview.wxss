@@ -1,0 +1,48 @@
+@import '../../components/kit/common.wxss';
+
+Page {
+  background: #ccc;
+}
+.temp {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: #fff;
+}
+.temp Btn.floating {
+  position: fixed;
+  width: 100%;
+  display: block;
+  bottom: 0;
+  left: 0;
+}
+.element-wrapper-15 {
+  display: block;
+  width: calc(100% - 30px);
+  padding: 0 15px;
+  height: auto;
+}
+.commerces {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.commerce {
+  flex: none;
+  width: 55px;
+  height: 55px;
+  background-color: gray;
+  background-size: cover;
+  border-radius: 100%;
+}
+.commerce:not(:last-of-type) {
+  margin-right: 15px;
+}
+.products {
+  overflow: auto;
+}
+.page-select {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}

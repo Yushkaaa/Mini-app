@@ -1,0 +1,27 @@
+<wxs src="set.wxs" module="SET" />
+
+<view class="Carousel">
+  <swiper
+    indicator-dots="{{ indicatorDots }}"
+    autoplay="{{ autoplay }}"
+    interval="{{ interval }}"
+    duration="{{ duration }}"
+    indicator-color="rgba(255, 255, 255, 0.4)"
+    indicator-active-color="#ffffff"
+    class="Carousel__swiper"
+    bind:change="carouselSwiped"
+    style="{{ SET.height(parsedImgs[current].height) }};}"
+  >
+    <block wx:for="{{ images }}"
+           wx:key="item.id"
+    >
+      <swiper-item>
+        <image src="{{ item.url }}"
+               class="Carousel__swiper-slide"
+               data-id="{{ item.id }}"
+               bind:load="imgLoaded"
+        />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

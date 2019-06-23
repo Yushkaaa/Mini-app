@@ -1,0 +1,55 @@
+.Btn {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+}
+.Btn button::after {
+	border-radius: 0;
+  content: ' ';
+  border: none;
+}
+.Btn button::before {
+	border-radius: 0;
+  content: ' ';
+  border: none;
+}
+.Btn button {
+  border: none;
+  border-radius: 0px;
+  font-size: 15px;
+  color: white;
+  text-align: center;
+}
+.Btn button image {
+  display: inline-block;
+  width: 20px;
+  height: 15px;
+  overflow: hidden;
+}
+.Btn.fullWidth {
+  width: 100%;
+}
+.Btn.fullWidth button {
+  width: 100%;
+}
+.Btn.floating {
+  margin-bottom: 0;
+}
+.Btn.floating button {
+  margin-bottom: 0;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 0px!important;
+  border: none;
+  text-align: center;
+  background: #09bb07;
+  color: #fff;
+  box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.2);
+  font-weight: 900;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.Btn.disabled button {
+  opacity: 0.5;
+  background: #09bb07;
+}

@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "",
+  "usingComponents": {
+    "Product": "../../components/kit/Product/Product",
+    "Carousel-Img": "../../components/kit/Carousel-Img/Carousel-Img",
+    "Divider": "../../components/kit/Divider/Divider",
+    "RecEvent-Carousel-Sync": "/components/wrapper/RecEvent-Carousel-Sync/RecEvent-Carousel-Sync",
+    "Icons-Container": "/components/kit/Icons-Container/Icons-Container"
+  }
+}

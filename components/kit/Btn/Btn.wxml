@@ -1,0 +1,10 @@
+<view class="Btn {{ mode }} {{ disabled ? 'disabled' : '' }}">
+  <button class="btn"
+          bindtap="{{ disabled ? '' : 'onTap' }}"
+  >
+    <image src="{{ src }}"
+           wx:if="{{ mode === 'withImage' }}"
+    />
+    {{ text }}
+  </button>
+</view>

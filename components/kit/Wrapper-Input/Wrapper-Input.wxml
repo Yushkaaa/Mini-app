@@ -1,0 +1,4 @@
+<view class="Wrapper_Input">
+  <rich-text class="Wrapper_Input__label"> {{ label }} </rich-text>
+  <slot name="input"></slot>
+</view>

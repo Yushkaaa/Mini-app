@@ -1,0 +1,39 @@
+<view>
+  <Btn mode="floating simple fullWidth"
+       text="Done!"
+  />
+  <!-- <Carousel-Img images="{{ carouselImgs }}" /> -->
+  <!-- <Carousel-Synced items="{{ carouselImgs }}" days="{{ daysEn }}" /> -->
+  <!--
+  <Page-Title-Block
+    title=""
+    imgSrc="../../assets/img/logo-normal.png"
+    time="10:00 - 20:00"
+    bindopenTimeManagement="handleOpenTimeManagement"
+  >
+    <Font-Picker
+      slot="font-picker"
+      edit="{{ true }}"
+      categories="{{ availableCategory }}"
+      fonts="{{ availableFonts }}"
+      font="{{ chosenFont }}"
+      category="{{ chosenCategory }}"
+      custom="{{ custom }}"
+      bind:changeCustom="handleChangeCustom"
+      bind:changeFont="handleChangeFont"
+      bind:changeCategory="handleChangeCategory"
+      style="display: block; width: 100%;"
+    />
+  </Page-Title-Block> -->
+  <!-- <Page-Title-Block
+    title=""
+    imgSrc="../../assets/img/logo-normal.png"
+    time="10:00 - 20:00"
+    bindopenTimeManagement="handleOpenTimeManagement"
+  >
+    <Title-With-Font slot="title-with-font"
+                     font="{{ titleFont }}"
+                     text="Some test title with Font"
+    />
+  </Page-Title-Block> -->
+</view>

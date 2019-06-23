@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "",
+  "usingComponents": {
+    "Wrapper-Input": "../../components/kit/Wrapper-Input/Wrapper-Input",
+    "Title": "../../components/kit/Title/Title",
+    "Choose-Day": "../../components/kit/Choose-Day/Choose-Day",
+    "Select": "../../components/kit/Select/Select",
+    "CustomText": "../../components/kit/Text/Text"
+  }
+}

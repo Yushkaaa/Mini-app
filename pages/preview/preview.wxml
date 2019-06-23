@@ -1,0 +1,101 @@
+<view class="element-wrapper-15"
+      style="background-color: #fff; height: 100vh;">
+
+  <view wx:if="{{ PRODUCT.mode === 'index' }}">
+    <Title
+      type="BoldBlack"
+      mode="Title"
+      text="Link your e-commerce"
+    />
+    <Title
+      type="_500Gray"
+      mode="Sub-Title"
+      text="Simply link your Xiaozan Account to your favorite platforms and start selling with ease"
+    />
+    <view class="commerces">
+      <view bind:tap="selectCommerce"
+            wx:for="{{ PRODUCT.commerces }}"
+            wx:for-item="commerce"
+            wx:key="index"
+            data-commerce="{{ commerce }}"
+            class="commerce"
+            style="background-image: url('{{ commerce.img }}')"
+      />
+    </view>
+  </view>
+
+  <view wx:elif="{{ PRODUCT.mode === 'edit' }}">
+    <view class="backBtn-title-wrapper">
+      <image  bindtap="goTo"
+              data-location="index"
+              class="back-button"
+              src="/assets/img/arrowLeft.svg"
+      />
+      <Title
+        type="BoldBlack"
+        mode="Title"
+        text="{{ PRODUCT.selectedCommerceId }}"
+      />
+    </view>
+    <Title
+      type="_500Gray"
+      mode="Sub-Title"
+      text="Simply link your Xiaozan Account to your favorite platforms and start selling with ease"
+    />
+    <Wrapper-Input label="{{ PRODUCT.selectedCommerceId }} shop URL">
+      <input slot="input"
+             bindinput="onChangeUrl"
+             type="text"
+      />
+    </Wrapper-Input>
+    <Btn bind:onTap="changeMode"
+         mode="floating"
+         text="Done"
+         data-mode="sendUrl"
+         class="floating"
+         disabled="{{ PRODUCT.url === '' }}"
+    />
+  </view>
+
+  <view wx:elif="{{ PRODUCT.mode === 'select' }}"
+        class="page-select"
+  >
+    <view class="backBtn-title-wrapper">
+      <image  bindtap="goTo"
+              data-location="index"
+              class="back-button"
+              src="/assets/img/arrowLeft.svg"
+      />
+      <Title
+        type="BoldBlack"
+        mode="Title"
+        text="Select products from {{ PRODUCT.selectedCommerceId }}"
+      />
+    </view>
+    <Title
+      type="_500Gray"
+      mode="Sub-Title"
+      text="Simply link your Xiaozan Account to your favorite platforms and start selling with ease"
+    />
+    <view class="products"
+          wx:if="{{ PRODUCT.selectedCommerceId }}" >
+      <Product
+        wx:for="{{ PRODUCT.commerces[PRODUCT.selectedCommerceId].products }}"
+        wx:for-item="product"
+        wx:key="index"
+        mode="select"
+        lang="ch"
+        appId="test"
+        product="{{ product }}"
+        bind:onSelect="onSelectProduct"
+      />
+    </view>
+    <Btn bind:onTap="changeMode"
+         mode="floating"
+         text="Done"
+         data-mode="sendProducts"
+         class="floating"
+    />
+  </view>
+
+</view>

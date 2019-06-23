@@ -1,0 +1,91 @@
+.RecEvent-Carousel-Sync {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+.RecEvent-Carousel-Sync__divider-wrapper {
+  width: calc(100% - 15px);
+  padding-left: 15px;
+}
+.RecEvent-Carousel-Sync__top {
+  width: calc(100% - 70px);
+  padding: 0 15px;
+  align-self: flex-start;
+  margin-bottom: 10px;
+}
+.RecEvent-Carousel-Sync__top .__text {
+  font-weight: 900;
+  line-height: 33px;
+  font-size: 30px;
+  color: #353535;
+  display: block;
+  text-align: left;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: -0.478333px;
+}
+.RecEvent-Carousel-Sync__top .__text text {
+  color: #576B95;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 33px;
+  font-size: 30px;
+  letter-spacing: -0.408px;
+  display: inline-block;
+}
+.RecEvent-Carousel-Sync__bottom {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+.RecEvent-Carousel-Sync__bottom .Carousel__swiper {
+  min-height: 435px;
+  max-height: 435px;
+  width: 100%;
+  overflow: hidden;
+  transition: height ease-out .3s;
+}
+.RecEvent-Carousel-Sync__bottom .Carousel__swiper .Carousel__swiper-slide {
+  width: calc(100% - 30px);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.RecEvent-Carousel-Sync__bottom .Carousel__swiper .Carousel__swiper-slide .__img {
+  width: calc(100% - 30px);
+  margin: 0 15px 15px 15px;
+  height: 305px;
+  border-radius: 14px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.15);
+}
+.RecEvent-Carousel-Sync__bottom .Carousel__swiper .Carousel__swiper-slide .__text-description {
+  display: block;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 900;
+  color: #323232;
+  width: calc(100% - 30px);
+  margin: 0 15px 15px 15px;
+}
+.RecEvent-Carousel-Sync__bottom .Carousel__swiper .Carousel__swiper-slide .__text-description text {
+  color: #888888;
+  font-size: 18px;
+  font-weight: 450;
+}
+.RecEvent-Carousel-Sync__bottom .Carousel__swiper .Carousel__swiper-slide .__text-time {
+  width: calc(100% - 30px);
+  margin: 0 15px 20px 15px;
+  display: block;
+  text-align: left;
+  font-size: 15px;
+  line-height: 25px;
+  color: #888888;
+  font-weight: 400;
+
+}

@@ -1,0 +1,80 @@
+/* Main styles */
+
+/* Overriding predefined styles */
+button::after {
+	border-radius: 0;
+  content: ' ';
+  border: none;
+}
+button::before {
+	border-radius: 0;
+  content: ' ';
+  border: none;
+}
+button {
+  border: none;
+  border-radius: 0px;
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+/* BTN */
+Btn.floating {
+  position: fixed;
+  width: 100%;
+  display: block;
+  bottom: 0;
+  left: 0;
+}
+/* WRAPPERS */
+.element-wrapper-15 {
+  display: block;
+  width: calc(100% - 30px);
+  padding: 0 15px;
+  height: auto;
+  position: relative;
+}
+.cut-by-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+.cut-by-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.cut-by-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.cut-by-4 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+.font {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.back-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  display: block;
+  z-index: 1;
+}
+.backBtn-title-wrapper {
+  position: relative;
+  width: 100%;
+}
+.backBtn-title-wrapper Title {
+  text-indent: 35px
+}

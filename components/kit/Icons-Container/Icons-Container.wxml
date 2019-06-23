@@ -1,0 +1,11 @@
+<view class="icons">
+  <view
+    wx:for="{{ icons }}"
+    wx:for-item="icon"
+    wx:key="index"
+    class="icon"
+    style="background-image: url('{{ icon.img }}')"
+    bind:tap="onTap"
+    data-id="{{ icon.id }}"
+  />
+</view>

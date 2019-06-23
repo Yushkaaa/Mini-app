@@ -1,0 +1,40 @@
+<view class="Font-Picker">
+  <picker mode="selector"
+          bindchange="bindCategoryChange"
+          range="{{ categories }}"
+          range-key="name"
+          value="{{ category }}"
+          disabled="{{ !edit }}"
+          class="{{ categories[category].edit ? 'Font-Picker__categories--edit' : 'Font-Picker__categories' }}"
+  >
+    <rich-text class="__text"
+               wx:if="{{ !categories[category].edit }}"
+               style="font-family: '{{ fonts[font].family }}'; font-size: {{ fonts[font].size }};"
+    >
+      {{ categories[category].name }}
+    </rich-text>
+    <image wx:else
+           class="settings-image"
+           src="./img/settings.png"
+    />
+  </picker>
+  <textarea wx:if="{{ categories[category].edit }}"
+            class="textarea"
+            bindinput="inputTextArea"
+            value="{{ custom }}"
+            style="font-family: '{{ fonts[font].family }}'; font-size: {{ fonts[font].size }};"
+            maxlength="30"
+  />
+  <picker mode="selector"
+          wx:if="{{ edit }}"
+          class="Font-Picker__fonts"
+          bindchange="bindPickerChange"
+          range="{{ fonts }}"
+          range-key="family"
+          value="{{ font }}"
+  >
+    <image class="font-image"
+           src="./img/font.png"
+    />
+  </picker>
+</view>

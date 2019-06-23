@@ -1,0 +1,17 @@
+.Carousel .Carousel__swiper {
+  height: 210px;
+  max-height: 250px!important;
+  min-height: 190px!important;
+  width: 100%;
+  transition: height ease-out .3s;
+}
+.Carousel .Carousel__swiper .Carousel__swiper-slide {
+  width: 100%;
+}
+.test {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: red;
+  z-index: 9;
+}

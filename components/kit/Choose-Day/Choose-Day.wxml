@@ -1,0 +1,20 @@
+<view class="WZ_Choose_Day {{ mode }}">
+  <view class="WZ_Choose_Day__wrapper">
+    <block
+      wx:for="{{ days }}"
+      wx:for-item="day"
+      wx:key="index"
+    >
+      <view
+        class="__day {{ day.active ? 'active' : '' }}"
+        data-id="{{ day.id }}"
+        data-name="{{ day.name }}"
+        data-active="{{ day.active }}"
+        data-lang="{{ lang }}"
+        bindtap="setActive"
+      >
+        {{ day.name }}
+      </view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,10 @@
+<view class="Event-Title-Block">
+  <rich-text
+    class="__title"
+  > {{ eventTitle }} </rich-text>
+  <rich-text class="__time"> {{ time }} </rich-text>
+  <view wx:if="{{ imgSrc }}"
+        class="__img"
+        style="background-image: url('{{ imgSrc }}')"
+  />
+</view>

@@ -1,0 +1,16 @@
+.icons {
+  display: flex;
+  border-radius: 20px;
+  justify-content: center;
+  border: 2px dashed #d8d8d8;
+  padding-top: 10px;
+  flex-wrap: wrap;
+  background: #fff;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px 10px 10px;
+  background-size: cover;
+}

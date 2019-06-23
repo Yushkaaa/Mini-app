@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "",
+  "usingComponents": {
+    "Btn": "/components/kit/Btn/Btn",
+    "Title": "/components/kit/Title/Title",
+    "Divider": "/components/kit/Divider/Divider",
+    "Product": "/components/kit/Product/Product",
+    "Wrapper-Input": "/components/kit/Wrapper-Input/Wrapper-Input"
+  }
+}

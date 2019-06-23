@@ -1,0 +1,43 @@
+<!--components/postBox/postBox.wxml-->
+<navigator url="/pages/locations/show/show?id={{location.id}}&location_id={{location.location_id}}">
+  <view class="container">
+    <image
+      src="{{ location.image_url }}"
+      class="gallery"
+      mode="aspectFill"
+    />
+
+    <view class="info-container">
+      <Title
+        type="PostBox"
+        mode="Title"
+        text="{{location.title}}"
+      />
+      <view class="detail-container">
+        <view class="detail-container__left">
+          <block
+            wx:for="{{ location.categories }}"
+            wx:for-item="term"
+            wx:for-index="index"
+            wx:key="key"
+          >
+            <Title
+              type="PostBox"
+              mode="Sub-Title"
+              text="{{ (index < 2) ? (term + ', ') : term }}"
+              wx:if="{{ index < 3 }}"
+            />
+          </block>
+        </view>
+        <view wx:if="{{ location.distance !== undefined }}"
+              class="detail-container__right"
+        >
+          <Title type="PostBox"
+                 mode="Sub-Title"
+                 text="{{ location.distance + ' km' }}"
+          />
+        </view>
+      </view>
+    </view>
+  </view>
+</navigator>

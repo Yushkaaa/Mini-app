@@ -1,0 +1,15 @@
+<view class="Text">
+  <view
+   class="{{ type }}"
+  >
+    <slot 
+      name="bold-text"
+    >
+    </slot>
+  </view>
+  <rich-text
+    class="{{ type }} {{ needBorder ? 'with-border' : '' }} common"
+  >
+    {{ text }}
+  </rich-text>
+</view>

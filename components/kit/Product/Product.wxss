@@ -1,0 +1,100 @@
+.Product {
+  position: relative;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 15px;
+  background: #fff;
+}
+
+.Product.selected {
+  opacity: .5;
+}
+.Product .Product__select {
+  position: absolute;
+  top: 32px;
+  left: 33px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: #fff;
+}
+.Product .Product__left {
+  position: relative;
+  width: 103px;
+  height: 103px;
+  margin-right: 20px;
+}
+.Product .Product__left .Product__left--img {
+  width: 103px;
+  height: 103px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 2px;
+}
+.Product .Product__right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 103px;
+}
+.Product__right .Product__right--top {
+  font-style: normal;
+  font-weight: 600;
+  line-height: 21px;
+  font-size: 17px;
+  letter-spacing: -0.408px;
+  color: #353535;
+  display: block;
+  text-align: left;
+  width: 100%;
+  max-height: 44px;
+  overflow: hidden;
+}
+.Product__right .Product__right--middle {
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 13px;
+  text-align: center;
+  letter-spacing: -0.312px;
+  color: #888888;
+  display: block;
+  text-align: left;
+  width: 100%;
+}
+.Product__right .__bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.Product__right .__bottom .__bottom--price-discount {
+  display: block;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 28px;
+  font-size: 28px;
+  text-align: center;
+  letter-spacing: -0.312px;
+  color: #FF5467;
+  margin-right: 5px;
+}
+.Product__right .__bottom .__bottom--price-original {
+  display: block;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 13px;
+  text-align: center;
+  letter-spacing: -0.312px;
+  color: #888888;
+  text-decoration: line-through;
+}

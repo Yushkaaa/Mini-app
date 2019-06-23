@@ -1,0 +1,34 @@
+.Page-Title-Block {
+  background-color: #ffffff;
+  padding: 16px 16px 5px 16px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  border-radius: 6px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom: 5px solid #f7f7f7;
+  transition: all ease-in .2s;
+}
+.Page-Title-Block .__title {
+  color: #000000;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.Page-Title-Block .__time {
+  color: #000000;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 900;
+}
+.Page-Title-Block .__img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  max-width: 180px;
+  height: 60px;
+}

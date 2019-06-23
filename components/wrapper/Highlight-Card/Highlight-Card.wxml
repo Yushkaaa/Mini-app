@@ -1,0 +1,16 @@
+<view class="Highlight-Card">
+  <view class="Highlight-Card__content">
+    <rich-text class="__text">
+      {{ title }} <text class="__text __text-gray"> {{ content }} </text>
+    </rich-text>
+  </view>
+  <view class="Highlight-Card__image"
+        id="{{ item.image_path }}"
+        bindtap="imageTapped"
+  >
+    <image class="__image"
+           src="{{ item.image_path }}"
+           mode="scaleToFill"
+    />
+  </view>
+</view>

@@ -1,0 +1,82 @@
+<view class="container">
+  <view class="link"
+        bindtap="goTo"
+        data-location="event"
+  >
+    Link to the page-title block (event page)
+  </view>
+  <view bindtap="submit">
+    {{string}}</view>
+<view wx:if = "bolean">{{"print bolean"}}</view>
+
+<view wx:for="{{array}}"> {{item-1}} </view>
+
+<view wx:if="array.length >= 6">{{array}}</view>
+
+<view>{{"Hello "+ name+ "!"}}</view>
+
+<view id="tapTest" data-hi="WeChat" bindtap="tapName"> Click me! </view>
+
+<!----<view id="tapTest" data-hi="WeChat" bindtap="tapName"> Click me! </view>-->
+
+ <!-- <Title
+    type="Highlight"
+    mode="Title"
+    text="Add New Recuring Event"
+    needBorder="{{ true }}"
+  />
+  <Select
+    values="{{ happensArray }}"
+    value="{{ chosenWhenHappens }}"
+    label="{{ happensLabel }}"
+    mode="selector"
+    bindchangeSelect="handleChangeSelect"
+  />
+  <Wrapper-Input
+    wx:if="{{ isWeekly }}"
+    label="Every"
+  >
+    <Choose-Day
+      days="{{ lang === 'en' ? daysEn : daysCh }}"
+      bindchooseDay="handleChooseDay"
+      active="{{ activeCh }}"
+      lang="{{ lang }}"
+      slot="input"
+      mode="isSlot"
+    />
+  </Wrapper-Input>
+  <Select
+    label="Available"
+    valueFrom="{{ availableFrom }}"
+    valueTo="{{ availableTo }}"
+    mode="time"
+    type="fromTo"
+    bindchangeSelect="handleChangeSelect"
+  />
+  <Select
+    label="Starting"
+    value="{{ fromDate }}"
+    mode="date"
+    bindchangeSelect="handleChangeSelect"
+  />
+  <Select
+    label="Until (Cancel manually?)"
+    values="{{ cancelManually ? ['I will cancel the event manually!'] : [''] }}"
+    value="{{ cancelManually ? 0 : toDate }}"
+    mode="{{ cancelManually ? 'selector' : 'date' }}"
+    bindchangeSelect="handleChangeSelect"
+    isDisabled="{{ cancelManually }}"
+  >
+    <checkbox-group
+      style="font-size: 13px;"
+      slot="checkbox"
+      bindchange="checkboxChange"
+    >
+      <checkbox
+        color="#1aad19"
+        checked="{{ cancelManually }}"
+      />
+    </checkbox-group>
+  </Select>
+  <button bindtap="submit"> Submit </button> -->
+</view>

@@ -1,0 +1,32 @@
+<view class="Product {{ product.select ? 'selected' : '' }}"
+      bindtap="{{ mode === 'select' ? 'onSelect' : 'goToMiniProgram' }}" >
+  <view class="Product__left" >
+    <view class="Product__left--img"
+          style="background-image: url('{{ product.img }}');" />
+    <view wx:if="{{ product.select }}"
+          style="background-image: url(../../../assets/icons/checked.svg)"
+          class="Product__select" />
+  </view>
+  <view class="Product__right">
+    <rich-text class="Product__right--top">
+      {{ product.title }}
+    </rich-text>
+    <rich-text wx:if="{{ lang === 'en' }}"
+               class="Product__right--middle" >
+      Purchase on {{ product.sourceApp }}
+    </rich-text>
+    <rich-text wx:if="{{ lang === 'ch' }}"
+               class="Product__right--middle" >
+      在{{ product.sourceApp }}上购买
+    </rich-text>
+    <view class="__bottom">
+      <rich-text wx:if="{{ product.discountPrice }}"
+                 class="__bottom--price-discount" >
+        ¥{{ product.discountPrice }}
+      </rich-text>
+      <rich-text class="__bottom--price-{{ product.discountPrice ? 'original' : 'discount' }}">
+        ¥{{ product.originalPrice }}
+      </rich-text>
+    </view>
+  </view>
+</view>

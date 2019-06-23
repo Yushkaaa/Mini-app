@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "",
+  "usingComponents": {
+    "Page-Title-Block": "../../components/wrapper/Page-Title-Block/Page-Title-Block",
+    "Font-Picker": "../../components/functional/Font-Picker/Font-Picker",
+    "Carousel-Img": "../../components/kit/Carousel-Img/Carousel-Img",
+    "Carousel-Synced": "../../components/kit/Carousel-Synced/Carousel-Synced",
+    "Title-With-Font": "../../components/kit/Title-With-Font/Title-With-Font",
+    "Btn": "../../components/kit/Btn/Btn"
+  }
+}

@@ -1,0 +1,10 @@
+.Title-With-Font {
+  display: block;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+.Title-With-Font .__text {
+  color: #000;
+  display: block;
+}

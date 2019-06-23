@@ -1,0 +1,3 @@
+<view class="Divider {{ type }}">
+  <view class="Divider__line {{ noMargin ? 'no-margin' : '' }} {{ isEternal ? 'eternal' : '' }}"/>
+</view>
